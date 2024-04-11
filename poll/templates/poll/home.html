@@ -1,0 +1,40 @@
+{% extends "poll/base.html" %}
+{% block title %}Homepage{% endblock %}
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Available Polls</h3>
+            </div>
+            <ul class="list-group">
+                {% for poll in polls %}
+                    <li class="list-group-item">
+                        <strong>{{ poll.question }}</strong>
+                        <span class="pull-right">
+                            {% if user.is_authenticated %}
+                                {% if poll.deadline %}
+                                    {% if user in poll.votes.all %}
+                                        {% if poll.deadline < timezone.now %}
+                                            <span class="text-danger">Voting Ended</span>
+                                        {% else %}
+                                            <a href="{% url 'vote' poll.id %}" class="btn btn-info btn-xs">Vote</a>
+                                        {% endif %}
+                                    {% else %}
+                                        <a href="{% url 'vote' poll.id %}" class="btn btn-info btn-xs">Vote</a>
+                                    {% endif %}
+                                {% else %}
+                                    <a href="{% url 'vote' poll.id %}" class="btn btn-info btn-xs">Vote</a>
+                                {% endif %}
+                            {% else %}
+                                <a href="{% url 'login' %}" class="btn btn-info btn-xs">Login to Vote</a>
+                            {% endif %}
+                            <a href="{% url 'results' poll.id %}" class="btn btn-default btn-xs">View Results</a>
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

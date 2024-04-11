@@ -1,0 +1,15 @@
+{% extends "poll/base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2>Sign Up</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary mx-2" type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</div>
+{% endblock %}

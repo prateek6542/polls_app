@@ -1,0 +1,14 @@
+{% extends "poll/base.html" %}
+
+{% block title %}Logout{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2>Logout</h2>
+    <p>You have been logged out.</p>
+    <div class="d-flex justify-content-end">
+        <a href="{% url 'login' %}" class="btn btn-primary mx-2">Login</a>
+        <a href="{% url 'signup' %}" class="btn btn-info mx-2">Sign Up</a>
+    </div>
+</div>
+{% endblock %}

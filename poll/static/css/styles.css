@@ -1,0 +1,142 @@
+/* Navbar and Panel Styles */
+.navbar-default, .btn, .form-control, .panel {
+    border-radius: 0;
+}
+
+.navbar-default {
+    background-color: rgba(245, 245, 220, .7);
+    border-color: rgba(245, 245, 220, .6);
+    box-shadow: 0px 3px 3px 0px #ddd;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: rgba(245, 245, 220, .9);
+    border-bottom: 4px solid #ddd;
+}
+
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: rgba(245, 245, 220, .7);
+    border-color: rgba(245, 245, 220, .6);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; 
+}
+
+.panel-footer {
+    background-color: rgba(245, 245, 220, .5);
+    border-color: rgba(245, 245, 220, .4);
+}
+
+.panel {
+    box-shadow: 0px 3px 3px 0px #ddd;
+}
+
+a.navbar-brand, .panel-title {
+    font-weight: bolder;
+}
+
+/* Login and Signup Page Styles */
+/* Container */
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Sign-up Title */
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Input Fields */
+.container input[type=text],
+.container input[type=email], 
+.container input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+.container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* Submit Button Hover */
+.container button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Link to Login */
+.form-footer a {
+    color: #007bff;
+}
+
+/* Link to Login Hover */
+.form-footer a:hover {
+    color: #0056b3;
+}
+
+/* Homepage Styles */
+
+/* Quiz Buttons */
+.quiz-buttons {
+    margin-top: 20px;
+}
+
+.quiz-buttons .btn {
+    margin-right: 10px;
+}
+
+/* Quiz List */
+.quiz-list {
+    margin-top: 20px;
+}
+
+.quiz-list .list-group-item {
+    position: relative;
+}
+
+.quiz-list .list-group-item .btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Panel Heading */
+.panel-heading {
+    overflow: auto; /* Clear the floats */
+}
+
+/* Logout Button */
+.panel-heading .pull-right .btn-danger {
+    margin-left: 10px; /* Add some spacing between buttons */
+}
